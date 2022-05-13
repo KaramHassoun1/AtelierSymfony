@@ -1,0 +1,28 @@
+{% extends 'DashboardTemplate.html.twig' %}
+
+{% block title %}
+    Number table
+{% endblock %}
+
+{% block pageTitle %}
+    Le tableau généré
+{% endblock %}
+
+{% block body %}
+
+    <table class="table">
+        <tr>
+            {% for number in array %}
+                <th>{{ number }}</th>
+            {% endfor %}
+        </tr>
+    </table>
+    <div class="alert alert-info">
+        <h1>Nombre de valeurs : </h1>
+        <h3>{{ array|length }}</h3>
+        <h1>Min : </h1>
+        <h3>{{ min(array) }}</h3>
+        <h1>Max : </h1>
+        <h3>{{ max(array) }}</h3>
+    </div>
+{% endblock %}

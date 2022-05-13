@@ -1,0 +1,21 @@
+{% extends 'DashboardTemplate.html.twig' %}
+
+{% block title %}
+    To do List
+{% endblock %}
+
+{% block pageTitle %}
+    Todo List
+{% endblock %}
+
+{% block body %}
+
+    <ul class="list-group">
+        {% for key,element in todos %}
+            <li class="list-group-item list-group-item-primary m-1">
+                <div class="fw-bold">{{ key }}</div>
+                {{ element }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
